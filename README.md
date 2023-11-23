@@ -1,6 +1,6 @@
 # yolov8-personal-guide
 
-## installation (MacOS/Window)
+## 💻 Installation (MacOS/Window)
 
 ### Note: How to install on the desired python version
 
@@ -41,15 +41,16 @@ Then:
 >>> import ultralytics
 ```
 
-## Import dataset
+## 📅 Import dataset
 
 - Note: The common problem is ultralytics cannot find the path to the dataset.
 - Goals: the idea is to make `C:\Users\PC\AppData\Roaming\Ultralytics\settings.yaml` file point to the correct project path.
+- This means that if I don't want the dataset to be exposed, I can just put it in a local folder and have `settings.yaml` point to it rather than put the dataset into the project. 
 
 
 ### 1. Reset ultralytics settings
 
-Run the following `reset_settings.py` in the PATH OF THE DESIRE PROJECT. 
+Go to the **PARENT FOLDER** of the datasets, Run the following `reset_settings.py`. 
 ```
 from ultralytics import settings
 settings.reset()
@@ -59,6 +60,7 @@ Which allows ultralytics setting file to point to the current project.
 ### 2. Rename the dataset
 
 The dataset folder must be `datasets`. 
+Since the `settings.yaml` is now pointing to `SomePath/PARENT_FOLDER/datasets`
 
 ### 3. Locate the `.yaml` file and run the script
 
