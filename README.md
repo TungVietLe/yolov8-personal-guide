@@ -43,7 +43,9 @@ Then:
 
 ## Import dataset
 
-Note: The common problem is ultralytics cannot find the path to the dataset.
+- Note: The common problem is ultralytics cannot find the path to the dataset.
+- Goals: the idea is to make `C:\Users\PC\AppData\Roaming\Ultralytics\settings.yaml` file point to the correct project path.
+
 
 ### 1. Reset ultralytics settings
 
