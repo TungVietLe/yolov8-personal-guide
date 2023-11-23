@@ -23,7 +23,6 @@ Check if pip installed:
 pip -V
 ```
 
-
 ### 2. Install ultralytics
 
 ```
@@ -40,4 +39,37 @@ python3.11.6
 Then:
 ```
 >>> import ultralytics
+```
+
+## Import dataset
+
+Note: The common problem is ultralytics cannot find the path to the dataset.
+
+### 1. Reset ultralytics settings
+
+Run the following `reset_settings.py` in the PATH OF THE DESIRE PROJECT. 
+```
+from ultralytics import settings
+settings.reset()
+```
+Which allows ultralytics setting file to point to the current project.
+
+### 2. Rename the dataset
+
+The dataset folder must be `datasets`. 
+
+### 3. Locate the `.yaml` file and run the script
+
+The `data.yaml` is a relative path. Example: `folderName/something.yaml`
+```
+from ultralytics import YOLO
+
+# Load a model
+model = YOLO("yolov8n.pt")  # load a pretrained model (recommended for training)
+
+# Train the model
+model.train(data="data.yaml", epochs=7)  # train the model
+metrics = model.val()  # evaluate model performance on the validation set
+path = model.export(format="onnx")  # export the model to ONNX format
+
 ```
