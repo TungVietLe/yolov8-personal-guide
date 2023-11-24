@@ -41,6 +41,9 @@ Then:
 >>> import ultralytics
 ```
 
+### 4. Good to go!
+Go to VS code and `control` `shift` `p` to find `select python interpreter` and pick the desire version.
+
 ## 📅 Import dataset
 
 - Note: The common problem is ultralytics cannot find the path to the dataset.
@@ -77,6 +80,8 @@ metrics = model.val()  # evaluate model performance on the validation set
 path = model.export(format="onnx")  # export the model to ONNX format
 
 ```
+
+
 
 
 ## ✅ Project completion checklist
