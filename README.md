@@ -1,4 +1,4 @@
-# yolov8-personal-guide
+# Yolov8 Personal Guide
 
 ## 💻 Installation (MacOS/Window)
 
@@ -77,3 +77,21 @@ metrics = model.val()  # evaluate model performance on the validation set
 path = model.export(format="onnx")  # export the model to ONNX format
 
 ```
+
+
+## ✅ Project completion checklist
+
+### 1. requirement.txt
+To generate one, run:
+```
+pip3 freeze > requirements.txt 
+```
+
+## 💽 Import other project's model
+
+1. Import `best.pt` and `requirement.txt`
+2. Install dependencies from `requirement.txt`
+   ```
+   # I HAVE NOT TRIED THIS YET
+   pip install -r /path/to/requirements.txt
+   ```
