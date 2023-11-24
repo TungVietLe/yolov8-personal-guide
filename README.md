@@ -97,6 +97,5 @@ pip3 freeze > requirements.txt
 1. Import `best.pt` and `requirement.txt`
 2. Install dependencies from `requirement.txt`
    ```
-   # I HAVE NOT TRIED THIS YET
-   pip install -r /path/to/requirements.txt
+   pip install -r requirements.txt          # or path/requirements.txt if on different path
    ```
